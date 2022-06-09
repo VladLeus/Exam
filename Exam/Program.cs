@@ -48,6 +48,8 @@ namespace Exam
                         }
                         AddToXml(info);
                         Console.WriteLine("Also u can check ur file");
+                        Console.WriteLine("Press Enter to go to the main Menu");
+                        Console.ReadKey();
                         break;
                     case 0:
                         Console.WriteLine("Ok, got it!");
@@ -74,9 +76,9 @@ namespace Exam
                 if (info[i].operationTime >= 5)
                 {
                     index = i;
-                    for (int j = index + 1; i < info.Length; i++)
+                    for (int j = index + 1; j < info.Length; j++)
                     {
-                        info[i - 1] = info[i];
+                        info[j - 1] = info[j];
                     }
                     Array.Resize(ref info, info.Length - 1);
                 }
@@ -97,7 +99,7 @@ namespace Exam
             bool exist = false;
             foreach (Auto.Autos obj in infomation)
             {
-                if (obj.color == color && obj.model == color)
+                if (obj.color == color && obj.model == brand)
                 {
                     exist = true;
                     Console.WriteLine(obj.ToString());
@@ -121,7 +123,7 @@ namespace Exam
            bool exist = false;
            foreach (Auto.Autos obj in infomation)
            {
-               if (obj.vantag == weigth)
+               if (obj.vantag >= weigth)
                {
                    exist = true;
                     Console.WriteLine(obj.ToString());

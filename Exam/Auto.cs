@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Exam
 {
     [Serializable]
-    class Auto
+     public class Auto
     {
         public struct Autos
         {
